@@ -27,7 +27,7 @@ public class Doctor extends Thread {
                         Hospital.log("Doctor " + doctorId + " acquired a treatment room.");
                         Hospital.log("Doctor " + doctorId + " begins treating " + patient.getName() + ".");
 
-                        int treatmentTime = (int) (Math.random() * 4000) + 1000;
+                        int treatmentTime = (int) (Math.random() * 1000) + 200;
                         Thread.sleep(treatmentTime);
 
                         Hospital.log("Doctor " + doctorId + " finished treating " + patient.getName() + ".");

@@ -34,8 +34,11 @@ public class Hospital {
     }
 
     public void startSimulation() {
-        Hospital.log("Patients arriving: P1 P2 P3 P4 P5");
-        
+        StringBuilder arrivingMsg = new StringBuilder("Patients arriving: ");
+        for (int i = 0; i < numPatients; i++) {
+        arrivingMsg.append("P").append(i + 1).append(" ");
+        }
+        Hospital.log(arrivingMsg.toString());        
         for (int i = 0; i < numDoctors; i++) {
             doctors[i] = new Doctor(i + 1, waitingRoom, roomManager, this);
             doctors[i].start();
