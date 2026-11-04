@@ -49,7 +49,6 @@ public class Doctor extends Thread {
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            Hospital.log("Doctor " + doctorId + " stopped.");
         }
     }
 }
